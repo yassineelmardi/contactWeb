@@ -1,0 +1,79 @@
+<div class="container spacer">
+
+  <div class="panel panel-primary" *ngIf="mode==1">
+    <div class="panel-heading">Nouveau contact</div>
+    <div class="panel-body">
+      <div class="from-group col-md-12">
+        <label class="control-label">ID </label>
+        <input type="text" class="form-control" [(ngModel)]="contact.id">
+        <label class="control-label">Nom: </label>
+
+        <input type="text" class="form-control" [(ngModel)]="contact.nom">
+
+        <label class="control-label">Prenom: </label>
+        <input type="text" class="form-control" [(ngModel)]="contact.prenom">
+
+        <label class="control-label">Email: </label>
+        <input type="text" class="form-control" [(ngModel)]="contact.email">
+
+        <label class="control-label"><span class="glyphicon glyphicon-phone" style="color: blueviolet;"></span>Telephone</label>
+        <input type="date" class="form-control" [(ngModel)]="contact.datenaissance">
+
+        <label class="control-label">Telephone</label>
+        <input type="text" class="form-control" [(ngModel)]="contact.tel">
+
+
+
+
+
+      </div>
+      <div class="col-md-offset-2 col-md-10">
+        <button class="btn btn-primary" (click)="updateContact()">Update</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-primary" *ngIf="mode==2">
+    <div class="panel-heading">Contact Ajouté</div>
+    <div class="panel-body">
+
+      <div class="from-group">
+        <label class="control-label">ID: </label>
+        <label >{{contact.id}}</label>
+      </div>
+
+      <div class="from-group">
+        <label class="control-label">Nom: </label>
+        <label >{{contact.nom}}</label>
+      </div>
+
+      <div class="from-group">
+        <label class="control-label">Prenom: </label>
+        <label >{{contact.nom}}</label>
+      </div>
+
+      <div class="from-group">
+        <label class="control-label">Email</label>
+        <label >{{contact.email}}</label>
+      </div>
+
+      <div class="from-group">
+        <label class="control-label">Date de Naissance</label>
+        <label >{{contact.datenaissance}}</label>
+      </div>
+
+      <div class="from-group">
+        <label class="control-label">Telephone</label>
+        <label >{{contact.tel}}</label>
+      </div>
+
+      <button class="btn btn-primary" (click)="mode=1">Nouveau Contact</button>
+
+
+
+    </div>
+
+  </div>
+
+
+</div>
